@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --ColorPrimariaTex_And_Icons: #F95D2C;
+    --Background: #252121;
+    --modal: #1A1818;
+    --Text: white;
+}
+
+body {
+    background-color: var(--Background) !important;
+}
+
+// fonts
+
+@font-face {
+    font-family: PoppinsBlackItalic;
+    src: url("../../../Design/fonts/Poppins-BlackItalic.ttf");
+}
+
+@font-face {
+    font-family: PoppinsBlack;
+    src: url("../../../Design/fonts/Poppins-Black.ttf");
+}
+
+@font-face {
+    font-family: PoppinsExtrabold;
+    src: url("../../../Design/fonts/Poppins-ExtraBold.ttf");
+}
+
+main {
+    padding-left: 167px;
+    padding-right: 106.64px;
+}
+
+// Nav
+
+nav {
+    position: relative;
+    top: 40px;
+}
+
+.Nav_Main {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 56px;
+    color: var(--Text);
+
+    >.Nav_page>p {
+        font-family: PoppinsExtrabold;
+        font-size: 26px;
+    }
+
+}
+
+.Nav_Options {
+    >ul {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+    }
+
+}
+
+.Options_Avatar_Client {
+    img {
+        width: 38px;
+        border-radius: 3.8px;
+    }
+}
+
+// Nav Lupa
+
+#NavLupa {
+    display: flex;
+    text-align: center;
+    gap: 3px 3px;
+    border-radius: 9px;
+
+    input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        opacity: 0;
+        display: none;
+    }
+
+    button {
+        background: transparent;
+        border: none;
+    }
+}
+
+
+// Menu
+
+menu {
+    position: absolute;
+    top: 0;
+    background-color: var(--modal);
+    width: 137px;
+    height: 100%;
+    border-radius: 0px 55px 55px 0px;
+}
+
+.MenuMain {
+    align-items: center;
+    justify-content: center;
+    display: grid;
+
+    .MenuLogo {
+        text-align: center;
+
+        >img {
+            position: relative;
+            top: 22px;
+            width: 93px;
+            cursor: pointer;
+        }
+    }
+}
+
+.MenuOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 84vh;
+
+    ul {
+        padding-left: 0;
+        list-style: none;
+        display: flex;
+        gap: 45px;
+        flex-direction: column;
+    }
+
+    .OptionUser {
+        cursor: pointer;
+        width: 78px;
+        padding: 7px;
+        text-align: center;
+        height: 78px;
+        border-radius: 15px;
+        border: 2px solid var(--ColorPrimariaTex_And_Icons);
+
+        .OptionUser_Img {
+            img {
+                width: 34px;
+            }
+        }
+
+        .OptionUser_Desc {
+            font-family: PoppinsBlack;
+            font-size: 10.3px;
+            position: relative;
+            top: 3px;
+            color: white;
+        }
+    }
+}
+
+// Conteudo
+
+#Conteudo {
+    display: flex;
+    align-items: center;
+    padding: 91px 0px 0px;
+    justify-content: center;
+    gap: 37px;
+}
+
+.UserPerfil {
+    width: 335px;
+    height: 502px;
+    border-radius: 30px;
+    background: var(--modal);
+    padding: 29px;
+
+    .UserPerfil_Main {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .UserPerfil_imagem>img {
+            width: 126px;
+            border-radius: 90px;
+        }
+
+        .UserPerfil_Name {
+            font-size: 31px;
+            font-family: PoppinsBlack;
+            color: white;
+
+            p {
+                margin-bottom: 0;
+            }
+
+            #UserPerfil_Roles {
+                font-size: 16px;
+                font-family: PoppinsExtrabold;
+                color: #1af7c1;
+                margin-bottom: 18px;
+            }
+        }
+
+
+        .SolicitarToken_button {
+            >button {
+                padding: 3px 16px;
+                font-size: 22px;
+                font-family: PoppinsBlack;
+                color: white;
+                background-color: transparent;
+                border: 2px solid var(--ColorPrimariaTex_And_Icons);
+                border-radius: 10px;
+                margin-bottom: 27px;
+            }
+        }
+    }
+
+}
+
+.UserPerfil_Inputs {
+    background-color: transparent;
+    display: grid;
+    gap: 10px;
+
+    #Form {
+        background-color: #252122;
+        border-radius: 11px;
+        border: 2px solid var(--ColorPrimariaTex_And_Icons);
+        display: flex;
+        .input{
+            gap: 10px;
+            display: block;
+            label{
+                color: white;
+                float: left;
+                padding-left: 10px;
+                padding-top: 5px;
+                font-size: 11px;
+                font-family: PoppinsExtrabold;
+            }
+        }
+        input {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            text-indent: 3px;
+            height: auto;
+            font-family: PoppinsExtrabold;
+            color: white;
+            width: 234px;
+        }
+
+        button {
+            position: relative;
+            top: -1px;
+            padding: 4px 8px 4px 0px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+
+    }
+
+
+
+}
+
+.CUser {
+    display: flex;
+    gap: 37px;
+}
+
+.UserPainel {
+    display: grid;
+    gap: 23px;
+}
+
+.UserEstatica {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+
+    .Estatica {
+        width: 234px;
+        height: 154px;
+        border-radius: 30px;
+        background-color: var(--modal);
+        padding: 25px;
+
+        .Estatica_Cont>p {
+            font-size: 41px;
+            font-family: PoppinsBlack;
+            color: var(--ColorPrimariaTex_And_Icons);
+            margin-bottom: -16.7px;
+        }
+
+        .Estatica_Name>p {
+            font-size: 22px;
+            font-family: PoppinsBlack;
+            color: white;
+        }
+    }
+}
+
+.UserPainelconfig {
+    width: 774px;
+    height: 401px;
+    border-radius: 30px;
+    background-color: var(--modal);
+}

@@ -1,0 +1,38 @@
+.CardPrdMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 75px 58px;
+  margin-bottom: 66px;
+}
+
+#plus {
+  width: 108px !important;
+}
+
+ul {
+  padding-left: 0 !important;
+}
+
+.simple-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.simple-pagination ul {
+  list-style: none;
+  text-align: center;
+  display: flex;
+}
+
+.simple-pagination ul > li {
+  color: white;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+.active > .current {
+  color: red;
+}/*# sourceMappingURL=store.css.map */

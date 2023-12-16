@@ -1,0 +1,718 @@
+:root {
+  --button: #F95D2C;
+  --pagin_atual: #FF0000;
+  --background: #252121;
+  --ColorTextoNav: white;
+  --FooterColor: #555454;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--button);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+@font-face {
+  font-family: PoppinsBlackItalic;
+  src: url("../fonts/Poppins-BlackItalic.ttf");
+}
+@font-face {
+  font-family: PoppinsBlack;
+  src: url("../fonts/Poppins-Black.ttf");
+}
+@font-face {
+  font-family: PoppinsExtrabold;
+  src: url("../fonts/Poppins-ExtraBold.ttf");
+}
+@font-face {
+  font-family: PoppinsMedium;
+  src: url("../fonts/Poppins-Medium.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+}
+
+body {
+  background-color: var(--background);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+@keyframes Desenhar {
+  to {
+    stroke-dashoffset: 0;
+  }
+  from {
+    stroke-dashoffset: 4849;
+  }
+}
+.loadingMain {
+  position: fixed;
+  width: 100vw;
+  padding: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.993);
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  display: flex;
+  z-index: 100;
+  transition: 1s;
+}
+
+.loadingCnt {
+  text-align: center;
+}
+.loadingCnt > .Titulo {
+  position: relative;
+  top: -20px;
+  color: white;
+  font-family: PoppinsBlack;
+  font-size: 40px;
+}
+.loadingCnt > .desc {
+  font-size: 20px;
+  font-family: PoppinsBlack;
+  position: relative;
+  top: -28px;
+  color: white;
+}
+
+.loading > svg {
+  width: 100%;
+  height: 100%;
+  stroke: white;
+  stroke-width: 10px;
+  stroke-dasharray: 4849;
+  stroke-dashoffset: 0;
+  animation: 4s Desenhar infinite alternate;
+}
+
+.loading > svg > g > path {
+  fill: transparent;
+}
+
+main {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.83) 0%, rgba(0, 0, 0, 0.83) 100%), url("../../Img/Main/cartaz/cartaz1.png"), lightgray 50%/cover no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carrinho {
+  position: relative;
+  cursor: pointer;
+}
+.carrinho #crnContador {
+  position: absolute;
+  top: -12px;
+  display: inline-block;
+  color: white;
+  left: 25px;
+}
+
+.Navmain {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#NavLupa {
+  display: flex;
+  text-align: center;
+  gap: 3px 3px;
+  border-radius: 9px;
+}
+#NavLupa input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  opacity: 0;
+  display: none;
+}
+#NavLupa button {
+  background: transparent;
+  border: none;
+}
+
+.NavPages {
+  display: flex;
+  text-align: center;
+  margin-top: 12px;
+  padding-left: 20px;
+}
+
+.NavLogo {
+  display: flex;
+}
+
+.NavPages > ul {
+  padding-left: 0px;
+}
+
+nav > .Navmain > .NavLogo > img {
+  width: 126px;
+}
+
+nav > .Navmain > .NavLogo > .NavPages > ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav > .Navmain > .NavLogo > .NavPages > ul > li {
+  padding: 10px;
+}
+
+a {
+  font-weight: 400;
+  font-size: 22.45px;
+  text-decoration: none;
+  color: var(--ColorTextoNav);
+}
+
+.NavFerramentas {
+  display: flex;
+  margin-top: 12px;
+  padding-left: 140px;
+}
+
+nav > .Navmain > .NavFerramentas > ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  padding: 10px;
+}
+
+img {
+  width: 37px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#UserFerramentas {
+  display: flex;
+}
+
+#UserFerramentas > div {
+  position: relative;
+  left: 7px;
+  top: 10px;
+  width: 14px;
+  height: 14px;
+  box-shadow: 2px -2px 0 1px white inset;
+  border: solid transparent;
+  border-width: 0px 0px 2px 2px;
+  transform: rotate(314deg);
+}
+
+.TitMain {
+  padding-top: 83px;
+  padding-left: 50px;
+  text-align: left;
+}
+
+.TiTCmc > .Titulo h1 {
+  color: #FFF;
+  font-family: PoppinsBlack;
+  font-size: 89px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.TiTCmc > .Titulo div p {
+  color: #FFF;
+  font-family: PoppinsExtrabold;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  margin-bottom: 30px !important;
+}
+
+.TiTCmc > .botao > a > button {
+  color: white;
+  padding: 28px 50px;
+  border-radius: 21px;
+  font-family: PoppinsExtrabold;
+  background-color: var(--button);
+  border: none;
+}
+
+.CardsExp {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  justify-content: center;
+}
+
+.CardsExp > .card {
+  text-align: center;
+  width: 348px;
+  height: 212px;
+  border-radius: 109px 13px 13px 13px;
+  background: #555454;
+}
+
+.CardsExp > .center {
+  border-radius: 13px;
+}
+
+.CardsExp > .end {
+  border-radius: 13px 109px 13px 13px;
+}
+
+.card > .img > img {
+  position: relative;
+  top: 15px;
+  width: 74px;
+}
+
+.card > .Tit {
+  position: relative;
+  top: 24px;
+}
+.card > .Tit p {
+  color: #FFF;
+  text-align: center;
+  font-family: PoppinsBlack;
+  font-size: 29px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+@keyframes avatarMaisad {
+  0% {
+    transform: translate(122%, -46%);
+  }
+  50% {
+    transform: translate(122%, -48%);
+  }
+  100% {
+    transform: translate(122%, -46%);
+  }
+}
+.Avatar img {
+  position: absolute;
+  transform: translate(122%, -46%);
+  animation: avatarMaisad 8s linear infinite;
+  width: 484px;
+}
+
+.PrdAMain,
+.AvaliaMain,
+.PrgMain {
+  padding-left: 50px;
+}
+
+.PrdDetail {
+  display: grid;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+}
+
+.PrdDetail > .PrdTitle > h1 {
+  color: white;
+  -webkit-text-stroke: 2.2px;
+  -webkit-text-stroke-color: var(--button);
+  font-family: PoppinsBlack;
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 30px;
+}
+
+.PrdDetail > .PrdDesc {
+  margin-bottom: 12px;
+}
+.PrdDetail > .PrdDesc p {
+  position: relative;
+  top: 1px;
+  color: #FFF;
+  font-family: PoppinsBlack;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 21.9px;
+}
+
+.PrdDetail > .Prdbutton > button {
+  padding: 7px 8px;
+  border-radius: 0px 13px;
+  border: none;
+  font-size: 17px;
+  font-family: PoppinsExtrabold;
+  color: white;
+  background-color: #303030;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.PrdCardMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+}
+
+.card {
+  width: 355px;
+  height: 360px;
+  border: none;
+  box-shadow: -11px 0.214583in 5px rgba(0, 0, 0, 0.33);
+  background: linear-gradient(372deg, rgb(32, 34, 37) 15%, rgb(85, 84, 84) 100%);
+  border-radius: 0px 84px;
+}
+.card .ImgCard > img {
+  width: 100%;
+  border-radius: 0px 84px 0px 0px;
+}
+
+#plus {
+  position: absolute;
+  left: 9px;
+  top: 63%;
+  text-align: center;
+  background-color: green;
+  width: 85px;
+  border-radius: 20px;
+}
+#plus p {
+  margin-bottom: 0px !important;
+  color: white;
+}
+
+p {
+  margin-bottom: 0px !important;
+}
+
+.PrpCardDetails {
+  text-align: center;
+}
+
+.CardDetails {
+  color: white;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-top: 19px;
+}
+
+.PrpCardDetails {
+  margin-top: 10px;
+}
+
+.PrpCardDetails > p {
+  color: #FFF;
+  font-family: PoppinsBlack;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.PrpCardMais > p {
+  color: var(--Boto, #F95D2C);
+  font-family: PoppinsExtrabold;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.PrpCardMais {
+  margin-top: -6px;
+  cursor: help;
+}
+
+.PrpCardButton {
+  text-align: center;
+}
+.PrpCardButton button {
+  width: 137px;
+  height: 36px;
+  background-color: #555454;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 18px;
+  border: none;
+  color: white;
+  font-family: PoppinsExtrabold;
+}
+
+.SobreMain {
+  background-color: #555454;
+  position: relative;
+  margin-top: -34px;
+  z-index: 5;
+}
+.SobreMain .SobrePrin {
+  align-items: center;
+  justify-content: center;
+  display: grid;
+}
+.SobreMain .SobrePrin .PrinTigle > h1 {
+  font-family: PoppinsBlack;
+  color: white;
+  font-size: 79px;
+  -webkit-text-stroke: 3.2px;
+  -webkit-text-stroke-color: var(--button);
+  margin: 0;
+}
+.SobreMain .SobrePrin .PrinDescr > p {
+  font-family: PoppinsExtrabold;
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  margin-top: -13px;
+}
+.SobreMain .SobreConteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+.SobreMain .SobreConteudo .SobreIcon > img {
+  width: 451px;
+  height: 432px;
+}
+.SobreMain .SobreConteudo .SobreTex {
+  text-align: center;
+  width: 658px;
+}
+.SobreMain .SobreConteudo .SobreTex p {
+  font-size: 18px;
+  font-family: PoppinsExtrabold;
+  color: white;
+}
+
+.AvaliaDetails {
+  margin-bottom: 40px;
+}
+
+.AvaliaTitle > h1 {
+  font-family: PoppinsBlack;
+  color: white;
+  -webkit-text-stroke: 2.3px;
+  -webkit-text-stroke-color: var(--button);
+  font-size: 49px;
+  line-height: 35px;
+}
+
+.AvaliaDesc > p {
+  font-family: PoppinsBlack;
+  color: white;
+  font-size: 21px;
+  line-height: 21.9px;
+}
+
+.AvlCardsMain::-webkit-scrollbar-thumb {
+  background-color: transparent !important;
+}
+
+.AvlCardsMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: scroll;
+  padding: 30px;
+}
+.AvlCardsMain .card {
+  width: 351px;
+  height: 347px;
+  background-color: #18151D;
+  box-shadow: -7px 6px 6px 2px rgba(0, 0, 0, 0.34);
+  border-radius: 32px;
+  transition: 0.8s;
+}
+.AvlCardsMain .card:hover {
+  transform: translateY(-1rem);
+}
+.AvlCardsMain .card:focus-within ~ .card,
+.AvlCardsMain .card:hover ~ .card {
+  transform: translateX(130px);
+}
+.AvlCardsMain .card:not(:first-child) {
+  margin-left: -8.125pc;
+}
+
+.CardCont {
+  padding: 30px;
+}
+.CardCont .CardCont_Header > p {
+  color: #7a7a8c;
+}
+.CardCont .CardCont_Header > .CardCont_Desc {
+  color: white;
+  overflow: scroll;
+  height: 221px;
+}
+.CardCont .CardCont_Header > .CardCont_Desc > p {
+  font-family: PoppinsExtrabold;
+  font-size: 21px;
+}
+
+.CardCont_Author {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+}
+.CardCont_Author .CardCont_Author_Avatar > img {
+  width: 55px;
+  border-radius: 52px;
+}
+.CardCont_Author .CardCont_Author_Name > p {
+  color: white;
+  font-family: PoppinsBlack;
+  font-size: 19px;
+}
+
+.Smok {
+  position: absolute;
+  width: 648px !important;
+  margin: auto -307px;
+}
+
+.PrgDetails {
+  margin-bottom: 90px;
+}
+
+.QueimandoMaconha > img {
+  z-index: -3;
+  margin-top: -69px;
+  width: 527px !important;
+}
+
+.PrgDetailsTitle > h1 {
+  font-family: PoppinsBlack;
+  color: white;
+  -webkit-text-stroke: 2.3px;
+  -webkit-text-stroke-color: var(--button);
+  font-size: 49px;
+  line-height: 35px;
+}
+
+.PrgDetailsDesc > p {
+  font-family: PoppinsBlack;
+  color: white;
+  font-size: 21px;
+  line-height: 21.9px;
+}
+
+.PrgCardMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 35px 26px;
+  flex-wrap: wrap;
+}
+
+.perCard {
+  width: 532px;
+  height: 71px;
+  padding: 20px;
+  border-radius: 13px;
+  background: #3D3D3D;
+  align-items: center;
+  display: flex;
+  color: white;
+  font-family: PoppinsBlack;
+}
+.perCard .Desc {
+  width: 100%;
+}
+.perCard .Seta > svg {
+  width: 38px;
+  height: 38px;
+}
+
+.FooterCtd {
+  background-color: var(--FooterColor);
+}
+
+.FooterMain {
+  display: flex;
+  position: relative;
+  gap: 188px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.FooterCtdMain {
+  position: relative;
+  top: -27px;
+  display: grid;
+}
+.FooterCtdMain .FooterMainLogo {
+  text-align: center;
+}
+.FooterCtdMain .FooterMainLogo > img {
+  width: 276px;
+}
+.FooterCtdMain .FooterMainTitle {
+  align-items: center;
+  font-family: PoppinsBlack;
+}
+.FooterCtdMain .FooterMainTitle > h1 {
+  font-size: 56px;
+  color: white;
+}
+
+.FooterNavas > ul::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 6px;
+  height: 308.7px;
+  margin-left: -4px;
+  border-radius: 20px;
+  background-color: var(--button);
+}
+
+.FooterNavasRedes > ul::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 6px;
+  height: 242.7px;
+  border-radius: 20px;
+  background-color: var(--button);
+}
+
+.FooterNavasRedes > ul,
+.FooterNavas > ul {
+  list-style: none;
+}
+.FooterNavasRedes > ul li,
+.FooterNavas > ul li {
+  font-family: PoppinsBlack;
+  color: white;
+  font-size: 28px;
+}
+
+.footerAuthor {
+  text-align: center;
+  font-family: PoppinsExtrabold;
+  color: white;
+  font-size: 24px !important;
+}
+.footerAuthor p > a {
+  color: black;
+  text-decoration: underline;
+}/*# sourceMappingURL=index.css.map */

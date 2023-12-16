@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background_color: #252121;
+  --Button: #F95D2C ;
+}
+
+main {
+  background: none !important;
+}
+
+.Carrinho_cont {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: grid;
+  padding: 46px;
+  color: white;
+}
+.Carrinho_cont .detail {
+  text-align: center;
+}
+.Carrinho_cont .Carrinho_Title_Vazio > h1 {
+  font-size: 56px;
+  font-family: PoppinsBlack;
+}
+.Carrinho_cont .Carrinho_img_Vazio > img {
+  width: 551px;
+  margin-bottom: 15px;
+  cursor: default;
+}
+.Carrinho_cont .Carrinho_Button_Vazio > button {
+  border-radius: 0px 25px;
+  background-color: var(--Button);
+  font-family: PoppinsBlack;
+  padding: 13px;
+  border: none;
+  color: white;
+}
+
+.Carrinho_Che {
+  gap: 39px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+}
+.Carrinho_Che .Produtos_Carrinho {
+  gap: 55px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  height: 518px;
+}
+.Carrinho_Che .Produtos_Carrinho .cardCarrinho {
+  position: relative;
+  padding-right: 14px;
+  display: flex;
+  gap: 21px;
+}
+.Carrinho_Che .Produtos_Carrinho .cardCarrinho .ImgCard > img {
+  width: 355px !important;
+  border-radius: 0px 84px !important;
+}
+.Carrinho_Che .Produtos_Carrinho .cardCarrinho .DescCard {
+  position: relative;
+  top: 21px;
+  color: white;
+}
+.Carrinho_Che .Produtos_Carrinho .cardCarrinho .DescCard > .Name > p {
+  font-family: PoppinsBlack;
+  font-size: 24px;
+}
+.Carrinho_Che .Produtos_Carrinho .cardCarrinho .DescCard .Preco {
+  margin-bottom: 12px;
+}
+.Carrinho_Che .Produtos_Carrinho .cardCarrinho .DescCard .Preco > p {
+  font-family: PoppinsMedium;
+}
+.Carrinho_Che .Produtos_Carrinho .cardCarrinho .DescCard .ButtonRemover > button {
+  padding: 7px 10px;
+  border: none;
+  background-color: #1A1818;
+  border-radius: 0px 20px;
+  font-size: 17px;
+  font-family: PoppinsMedium;
+  color: white;
+}
+.Carrinho_Che .Subtotal_Carrinho {
+  justify-content: center;
+  display: flex;
+  width: 503px;
+  height: 503px;
+  background-color: #1A1818;
+  padding: 79px;
+  border-radius: 32px;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal {
+  text-align: center;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal #Title {
+  margin-bottom: 20px;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal #Title > p {
+  font-family: PoppinsBlack;
+  font-size: 32px;
+  color: white;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal #Valor_Total {
+  margin-bottom: 30px;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal #Valor_Total > p {
+  font-family: PoppinsBlack;
+  font-size: 46px;
+  color: #B6B6B6;
+  margin-bottom: 34px;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal #Sistema_Cupom {
+  display: flex;
+  margin-bottom: 59px;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal #Sistema_Cupom form {
+  border: 2px white solid;
+  border-radius: 30px 0px 0px 30px;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal #Sistema_Cupom form input {
+  background: transparent;
+  padding: 10px 18px 10px 24px;
+  outline: none;
+  font-size: 27px;
+  font-family: PoppinsBlack;
+  color: white;
+  width: 100%;
+  border: none;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal #Sistema_Cupom .submit button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-radius: 0px 30px 30px 0px;
+  border: 2px white solid;
+  font-size: 27px;
+  font-family: PoppinsBlack;
+  padding: 10px 14px 10px 4px;
+}
+.Carrinho_Che .Subtotal_Carrinho .Desc_SubTotal #Finalizar_Button > button {
+  display: inline-flex;
+  padding: 8px 51px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0px 30px;
+  background: #008000;
+  font-size: 32px;
+  font-family: PoppinsBlack;
+  border: none;
+  color: white;
+}/*# sourceMappingURL=carrinho.css.map */

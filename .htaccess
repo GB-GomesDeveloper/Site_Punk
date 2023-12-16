@@ -1,0 +1,6 @@
+RewriteEngine On
+
+# Redirecionar internamente as páginas sem extensão para o arquivo correspondente (crucial para o funcionamento da página)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ $1.php [L]
