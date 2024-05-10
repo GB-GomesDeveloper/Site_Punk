@@ -13,8 +13,8 @@ $discord_code = $_GET['code'];
 
 $payload = [
     'code'=>$discord_code,
-    'client_id'=>'1167198133936205884',
-    'client_secret'=>'SJ_Y8sbpaxVMYOc_9vjyC0hEOFJS7Slb',
+    'client_id'=>'',
+    'client_secret'=>'',
     'grant_type'=>'authorization_code',
     'redirect_uri'=>'http://www.localhost/Site_Novo_Punk/app/auth/discord/api_discord.php',
     'scope'=>["email", "guilds", "identify"], 
