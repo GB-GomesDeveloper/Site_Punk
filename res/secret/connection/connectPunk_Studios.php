@@ -1,7 +1,7 @@
 <?php 
-$Info = "mysql:host=164.152.60.89;dbname=Punk_Studios;charset=utf8mb4";
-$username = "SitePunk";
-$password = "uL6pFlABMywsVvve";
+$Info = "";
+$username = "";
+$password = "";
 
 try{
 $connectPunk_Studios = new PDO($Info, $username, $password);
